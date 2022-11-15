@@ -7,6 +7,7 @@ import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.Id
 import jakarta.persistence.Persistence
+import jakarta.validation.constraints.NotNull
 
 class App {
     val greeting: String
@@ -14,7 +15,7 @@ class App {
             val emFactory = Persistence.createEntityManagerFactory("ecommerce")
             val em = emFactory.createEntityManager()
             em.transaction.begin()
-            val msg = Message(text = "before")
+            val msg = Message(text = null)
             em.persist(msg)
             em.transaction.commit()
 
@@ -38,5 +39,6 @@ class Message(
     @Id
     @GeneratedValue
     val id: Long? = null,
-    var text: String,
+    @field:NotNull
+    var text: String?,
 )
