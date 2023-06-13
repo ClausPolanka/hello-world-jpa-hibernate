@@ -1,6 +1,6 @@
 @file:Suppress("RemoveRedundantQualifierName")
 
-package ecommerce
+package helloworldjpa
 
 import jakarta.persistence.*
 import jakarta.validation.constraints.NotNull
