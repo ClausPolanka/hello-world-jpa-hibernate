@@ -36,6 +36,5 @@ dependencies {
 }
 
 application {
-    // Define the main class for the application.
-    mainClass = 'ecommerce.AppKt'
+    mainClass = 'helloworldjpa.AppKt'
 }
