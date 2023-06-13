@@ -11,7 +11,7 @@ class App {
             val emFactory = jakarta.persistence.Persistence.createEntityManagerFactory("helloworld")
             val em = emFactory.createEntityManager()
             em.transaction.begin()
-            val msg = Message(text = null)
+            val msg = Message(text = "Claus Polanka")
             em.persist(msg)
             em.transaction.commit()
 
