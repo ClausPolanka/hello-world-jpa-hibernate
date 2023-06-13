@@ -36,7 +36,7 @@ class Message(
     @GeneratedValue
     val id: Long? = null,
     @field:NotNull
-    var text: String?,
+    var text: String,
 ) {
     override fun toString(): String {
         return "Message(id=$id, text=$text)"
