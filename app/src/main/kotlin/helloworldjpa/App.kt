@@ -3,6 +3,7 @@
 package helloworldjpa
 
 import jakarta.persistence.*
+import jakarta.validation.constraints.NotNull
 
 class App {
     val greeting: String
@@ -10,7 +11,7 @@ class App {
             val emFactory = jakarta.persistence.Persistence.createEntityManagerFactory("helloworld")
             val em = emFactory.createEntityManager()
             em.transaction.begin()
-            val msg = Message(text = "Claus Polanka")
+            val msg = Message(text = null)
             em.persist(msg)
             em.transaction.commit()
 
@@ -34,8 +35,8 @@ class Message(
     @Id
     @GeneratedValue
     val id: Long? = null,
-    @field:jakarta.validation.constraints.NotNull
-    var text: String,
+    @field:NotNull
+    var text: String?,
 ) {
     override fun toString(): String {
         return "Message(id=$id, text=$text)"
