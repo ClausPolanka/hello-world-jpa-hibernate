@@ -35,7 +35,7 @@ class Message(
     @Id
     @GeneratedValue
     val id: Long? = null,
-    @field:NotNull
+    @field:jakarta.validation.constraints.NotNull
     var text: String,
 ) {
     override fun toString(): String {
