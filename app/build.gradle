@@ -1,7 +1,7 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.9.0-Beta'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.0-RC'
     id 'application'
-    id 'org.jetbrains.kotlin.plugin.jpa' version '1.9.0-Beta'
+    id 'org.jetbrains.kotlin.plugin.jpa' version '1.9.0-RC'
 
     // Plugin which allows to check for new dependency versions.
     // Can be called with: `./gradlew dependencyUpdates`
@@ -29,8 +29,8 @@ dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
 
     // My dependencies
-    implementation 'org.hibernate.orm:hibernate-core:6.2.4.Final'
-    implementation 'org.hibernate.validator:hibernate-validator:8.0.0.Final'
+    implementation 'org.hibernate.orm:hibernate-core:6.2.5.Final'
+    implementation 'org.hibernate.validator:hibernate-validator:8.0.1.Final'
     runtimeOnly 'org.glassfish.expressly:expressly:5.0.0'
     runtimeOnly 'org.postgresql:postgresql:42.6.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0-M1'
