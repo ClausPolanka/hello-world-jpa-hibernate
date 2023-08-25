@@ -2,13 +2,13 @@
 
 package helloworldjpa
 
-import jakarta.persistence.*
-import jakarta.validation.constraints.NotNull
+import javax.persistence.*
+import javax.validation.constraints.NotNull
 
 class App {
     val greeting: String
         get() {
-            val emFactory = jakarta.persistence.Persistence.createEntityManagerFactory("helloworld")
+            val emFactory = javax.persistence.Persistence.createEntityManagerFactory("helloworld")
             val em = emFactory.createEntityManager()
             em.transaction.begin()
             val msg = Message(text = "Claus Polanka")
