@@ -5,7 +5,7 @@ plugins {
 
     // Plugin which allows to check for new dependency versions.
     // Can be called with: `./gradlew dependencyUpdates`
-    id 'com.github.ben-manes.versions' version '0.47.0'
+    id 'com.github.ben-manes.versions' version '0.48.0'
 
     id 'idea'
 }
@@ -29,7 +29,7 @@ dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
 
     // My dependencies
-    implementation 'org.hibernate.orm:hibernate-core:6.3.0.CR1'
+    implementation 'org.hibernate.orm:hibernate-core:6.3.0.Final'
     implementation 'org.hibernate.validator:hibernate-validator:8.0.1.Final'
     runtimeOnly 'org.glassfish.expressly:expressly:5.0.0'
     runtimeOnly 'org.postgresql:postgresql:42.6.0'
