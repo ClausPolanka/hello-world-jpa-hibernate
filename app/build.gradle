@@ -39,3 +39,10 @@ dependencies {
 application {
     mainClass = 'helloworldjpa.AppKt'
 }
+
+test {
+    useJUnitPlatform()
+    testLogging {
+       events("passed", "skipped", "failed") 
+    }
+}
