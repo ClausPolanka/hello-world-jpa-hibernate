@@ -1,7 +1,7 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.9.20-Beta'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.20'
     id 'application'
-    id 'org.jetbrains.kotlin.plugin.jpa' version '1.9.20-Beta'
+    id 'org.jetbrains.kotlin.plugin.jpa' version '1.9.20'
 
     // Plugin which allows to check for new dependency versions.
     // Can be called with: `./gradlew dependencyUpdates`

@@ -33,7 +33,7 @@ dependencies {
     implementation 'org.hibernate.validator:hibernate-validator:8.0.1.Final'
     runtimeOnly 'org.glassfish.expressly:expressly:5.0.0'
     runtimeOnly 'org.postgresql:postgresql:42.6.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.1'
 }
 
 application {
