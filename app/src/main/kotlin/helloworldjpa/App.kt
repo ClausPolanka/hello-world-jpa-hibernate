@@ -3,7 +3,7 @@
 package helloworldjpa
 
 import jakarta.persistence.*
-import jakarta.validation.constraints.NotNull
+import jakarta.validation.constraints.*
 
 class App {
     val greeting: String
