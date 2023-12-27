@@ -18,16 +18,14 @@ class App {
 
             em = emFactory.createEntityManager()
             em.transaction.begin()
-            println("==================================================================================")
-            val messages = em.createQuery("select m from Message m where m.id = :id", Message::class.java).setParameter("id", msg.id).singleResult
-            println("==================================================================================")
-            val messages2 = em.createQuery("select m from Message m where m.id = :id", Message::class.java).setParameter("id", msg.id).singleResult
-            println("==================================================================================")
+            val loaded = em.find(Message::class.java, msg.id)
+            loaded.text = "updated"
             em.transaction.commit()
             em.close()
+
             emFactory.close()
 
-            return "Hello World to '${msg.text}'!"
+            return "Hello World to '${loaded.text}'!"
         }
 }
 
@@ -36,7 +34,7 @@ fun main() {
 }
 
 @Entity
-class Message(
+data class Message(
     @Id
     @GeneratedValue
     val id: Long? = null,
