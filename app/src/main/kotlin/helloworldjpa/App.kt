@@ -8,16 +8,21 @@ import jakarta.validation.constraints.*
 class App {
     val greeting: String
         get() {
-            val emFactory = jakarta.persistence.Persistence.createEntityManagerFactory("helloworld")
-            val em = emFactory.createEntityManager()
+            val emFactory = jakarta.persistence.Persistence.createEntityManagerFactory("helloworld-mysql")
+            var em = emFactory.createEntityManager()
             em.transaction.begin()
             val msg = Message(text = "Claus Polanka")
             em.persist(msg)
             em.transaction.commit()
+            em.close()
 
+            em = emFactory.createEntityManager()
             em.transaction.begin()
-            val messages = em.createQuery("select m from Message m", Message::class.java).resultList
-            messages.last().text = "updated"
+            println("==================================================================================")
+            val messages = em.createQuery("select m from Message m where m.id = :id", Message::class.java).setParameter("id", msg.id).singleResult
+            println("==================================================================================")
+            val messages2 = em.createQuery("select m from Message m where m.id = :id", Message::class.java).setParameter("id", msg.id).singleResult
+            println("==================================================================================")
             em.transaction.commit()
             em.close()
             emFactory.close()
