@@ -8,7 +8,7 @@ import jakarta.validation.constraints.*
 class App {
     val greeting: String
         get() {
-            val emFactory = jakarta.persistence.Persistence.createEntityManagerFactory("helloworld-mysql")
+            val emFactory = jakarta.persistence.Persistence.createEntityManagerFactory("helloworld")
             var em = emFactory.createEntityManager()
             em.transaction.begin()
             val msg = Message(text = "Claus Polanka")
