@@ -29,7 +29,7 @@ dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
 
     // My dependencies
-    implementation 'org.hibernate.orm:hibernate-core:7.0.0.Beta2'
+    implementation 'org.hibernate.orm:hibernate-core:7.0.0.Beta3'
     implementation 'org.hibernate.validator:hibernate-validator:9.0.0.Beta3'
     runtimeOnly 'org.glassfish.expressly:expressly:5.0.0'
     runtimeOnly 'org.postgresql:postgresql:42.7.4'
